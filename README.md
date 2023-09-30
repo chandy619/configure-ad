@@ -53,6 +53,13 @@ This tutorial outlines the implementation of on-premises Active Directory within
 <br />
 
 <p>
+<img width="395" alt="image" src="https://github.com/chandy619/configure-ad/assets/144288806/ea682246-c823-4ce5-a213-50ed9468bbef">
+</p>
+<p>
+TEXT
+</p>
+<p>
+<img width="497" alt="image" src="https://github.com/chandy619/configure-ad/assets/144288806/34d8c389-9d54-459a-bb1c-ba2db2c43ac9">
 <img width="252" alt="image" src="https://github.com/chandy619/configure-ad/assets/144288806/3c83dafa-a7e8-4005-aa22-72200f0c1f4d">
 </p>
 <p>
