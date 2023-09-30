@@ -64,7 +64,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
 <img width="252" alt="image" src="https://github.com/chandy619/configure-ad/assets/144288806/3c83dafa-a7e8-4005-aa22-72200f0c1f4d">
 </p>
 <p>
-Text
+Now that you've created your OUs, you'll create another Adminstrative User. Follow this string of actions to create an Admin User named Jane Doe: Right-click '_ADMINS' folder > 'New' > 'User' > Fill in required fields > 'Next" > Create a password > 'Next' > 'Finish'. Now, you'll need to add administrative permissions to Jane Doe's account. Follow these steps: Right-click Jane Doe's name > select 'Properties' > click on 'Member Of' tab > 'Add' > type in 'Domain Admins' > click 'Check Names' > 'Apply' > 'OK'.
 </p>
 <br />
 
