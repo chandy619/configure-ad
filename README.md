@@ -60,11 +60,11 @@ This tutorial outlines the implementation of on-premises Active Directory within
 4. Create Organizational Units and Users within Active Directory (AD)- Since your DC-1 VM restarted, you'll need to log back in using the FQDN (Fully Qualified Domain Name) as the username, i.e., mydomain.com\labuser. Once you're logged in, click on the 'Start' menu and search for 'Active Directory Users and Computers'. First you'll need to create 2 new Organizational Units (OUs). Follow this string of actions to do so: Right-click 'mydomain.com' > 'New' > 'Organizational Unit' > type in '_EMPLOYEES' >'OK'. Repeat the steps to create another named '_ADMINS'.
 </p>
 <p>
-<img width="497" alt="image" src="https://github.com/chandy619/configure-ad/assets/144288806/34d8c389-9d54-459a-bb1c-ba2db2c43ac9">
+<img width="487" alt="image" src="https://github.com/chandy619/configure-ad/assets/144288806/e73e5a96-f3fb-47fc-b9ed-62fec578c450">
 <img width="252" alt="image" src="https://github.com/chandy619/configure-ad/assets/144288806/3c83dafa-a7e8-4005-aa22-72200f0c1f4d">
 </p>
 <p>
-Now that you've created your OUs, you'll create another Adminstrative User. Follow this string of actions to create an Admin User named Jane Doe: Right-click '_ADMINS' folder > 'New' > 'User' > Fill in required fields > 'Next" > Create a password > 'Next' > 'Finish'. Now, you'll need to add administrative permissions to Jane Doe's account. Follow these steps: Right-click Jane Doe's name > select 'Properties' > click on 'Member Of' tab > 'Add' > type in 'Domain Admins' > click 'Check Names' > 'Apply' > 'OK'.
+Now that you've created your OUs, you'll create another Adminstrative User. Follow this string of actions to create an Admin User named Jane Doe: Right-click '_ADMINS' folder > 'New' > 'User' > Fill in required fields > 'Next" > Create a password > 'Next' > 'Finish'. Now, you'll need to add administrative permissions to Jane Doe's account. Follow these steps: Right-click Jane Doe's name > select 'Properties' > click on 'Member Of' tab > 'Add' > type in 'Domain Admins' > click 'Check Names' > 'Apply' > 'OK'. When you're finished, log out of DC-1's VM and log back in using Jane Doe's profile with 'mydomain.com\jane_admin'.
 </p>
 <br />
 
