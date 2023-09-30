@@ -69,18 +69,18 @@ Now that you've created your OUs, you'll create another Adminstrative User. Foll
 <br />
 
 <p>
-<img>
+<img width="388" alt="image" src="https://github.com/chandy619/configure-ad/assets/144288806/a40eb540-d84f-45e0-9c83-d4226c34d894">
 </p>
 <p>
-5. Join Client-1 to Your Domain (mydomain.com)-
+5. Join Client-1 to Your Domain (mydomain.com)- In Azure, the first thing you'll want to do is copy DC-1's Private IP Address. Go back to Virtual Machines and select Client-1. To join Client-1 to 'mydomain.com', follow this string of actions: click 'Networking' on left-hand side > click on 'Network Interface' hyperlink > click on 'DNS Servers' on the left-hand sided > select 'Custom' versus 'Inherit from virtual network' > paste DC-1's Private IP address into the field box > hit 'Save' > return to Clien'1's VM home page and click 'Restart' icon at the top of your window. Using Remote Desktop, log back into Client-1. Once you're logged in, open 'cmd' from the 'Start' menu and enter 'ipconfig /all' to check if the DNS Servers reflect's the DC-1's private IP address.
 </p>
 <br />
 
 <p>
-<img>
+<img width="556" alt="image" src="https://github.com/chandy619/configure-ad/assets/144288806/a9d495c6-996d-4193-ab92-30ee596ff88d">
 </p>
 <p>
-Text
+Moving along, go to the 'Start' menu and click on 'System' for settings. Click on 'Rename this PC (advanced)' located on the right-hand side > click'Change' > click on 'Domain' and enter 'mydomain.com' > OK > enter Jane Doe's credentials.
 </p>
 <br />
 
