@@ -20,8 +20,8 @@ This tutorial outlines the implementation of on-premises Active Directory within
 <h2>High-Level Deployment and Configuration Steps</h2>
 
 - Step 1: Create your Resources via Azure (Domain Controller and Client VMs)
-- Step 2: Join Client VM to Domain Controller VM
-- Step 3: Deploy Active Directory (AD)
+- Step 2: Install and Deploy Active Directory
+- Step 3: Join Client VM to Domain Controller VM
 - Step 4: Create Users
 
 <h2>Deployment and Configuration Steps</h2>
@@ -30,7 +30,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
 <img width="323" alt="image" src="https://github.com/chandy619/configure-ad/assets/144288806/0b1aa6d6-658b-4f21-b88d-dfbd236c9b69">
 </p>
 <p>
-1. Create your resources in Azure: 1 Resource Group > 2 VMs > 1 vnet. The first VM will be a Windows Server 2022 named Domain Controller (DC-1) and the second VM will be a Windows 10 named Client (Client-1). Be sure to set the DC-1's NIC Private IP address to static by following this string of actions: DC-1 > Settings > Networking > Network Interface > IP configurations > Click on result >Sweitch Assignment to 'Static' from 'Dynamic' > save changes.
+1. Create your resources in Azure: 1 Resource Group > 2 VMs > 1 vnet. The first VM will be a Windows Server 2022 named Domain Controller (DC-1) and the second VM will be a Windows 10 named Client (Client-1). Be sure to set the DC-1's NIC Private IP address to static by following this string of actions: DC-1 > Settings > Networking > Network Interface > IP configurations > Click on result >Switch Assignment to 'Static' from 'Dynamic' > save changes.
 </p>
 <br />
 
@@ -72,7 +72,7 @@ Now that you've created your OUs, you'll create another Adminstrative User. Foll
 <img>
 </p>
 <p>
-Text
+5. Join Client-1 to Your Domain (mydomain.com)-
 </p>
 <br />
 
