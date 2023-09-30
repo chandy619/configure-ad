@@ -93,10 +93,11 @@ Moving along, go to the 'Start' menu and click on 'System' for settings. Click o
 <br />
 
 <p>
-<img>
+<img width="389" alt="image" src="https://github.com/chandy619/configure-ad/assets/144288806/b22d3097-6858-4d20-999b-cc3445011300">
+<img width="656" alt="image" src="https://github.com/chandy619/configure-ad/assets/144288806/486d7e93-ed3d-473e-9f7e-a2912bb1e8f4">
 </p>
 <p>
-Text
+7. Create Additional Users and Attempt to Login to Client-1: Go back to DC-1's VM where you should still be logged in as Jane Doe. Follow this string of actions to create thousands of random domain users: 'Start' menu > search 'PowerShell ISE' > right-click to 'Run as an administrator' > click 'Yes' > click on the paper icon to create a New Script > paste the contents of this <a href="https://github.com/AsiaPonder001/BunchofUsers/blob/main/README.md?plain=1)"> script </a> into it > 'Run' script by selecting the green play icon > Observe the accounts being created.
 </p>
 <br />
 
