@@ -18,7 +18,7 @@ This lab outlines the implementation of on-premises Active Directory within Azur
 - Windows Server 2022
 - Windows 10 (21H2)
 
-<h2>High-Level Deployment and Configuration Steps</h2>
+<h2>High-Level Steps</h2>
 
 - Step 1: Create your Resources via Azure (Domain Controller and Client VMs)
 - Step 2: Install and Deploy Active Directory
