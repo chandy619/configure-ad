@@ -28,8 +28,8 @@ This lab outlines the implementation of on-premises Active Directory within Azur
 <h2>Deployment and Configuration Steps</h2>
 
 <p>
-<img width="960" alt="image" src="https://github.com/chandy619/configure-ad/assets/144288806/e8916f25-003d-4c9b-8af9-a37e3b5e7d17">
-<img width="961" alt="image" src="https://github.com/chandy619/configure-ad/assets/144288806/124bd85a-11e0-44c8-b1c6-d5ffadce64a1">
+<img width="960" alt="image" src="https://github.com/chandy619/configure-ad/assets/144288806/f16b5755-735c-4253-a507-746633587493">
+<img width="960" alt="image" src="https://github.com/chandy619/configure-ad/assets/144288806/e926b571-b92c-491e-9892-e20704ec99af">
 </p>
 <p>
 1. Create Your Resources in Azure: 1 Resource Group > 2 VMs > 1 vnet. The first VM will be a Windows Server 2022 as your Domain Controller (named DC-1) and the second VM will be a Windows 10 PC Client (named Client-1). Be sure to set the DC-1's NIC Private IP address to static by following this string of actions: DC-1 > Settings > Networking > Network Interface hyperlink > IP configurations > Click on result > Switch Assignment from 'Dynamic' to 'Static'> 'Save' changes.
@@ -37,8 +37,8 @@ This lab outlines the implementation of on-premises Active Directory within Azur
 <br />
 
 <p>
-<img width="892" alt="image" src="https://github.com/chandy619/configure-ad/assets/144288806/3a311c6a-c630-4606-a14c-7eb97e6f9f0c">
-<img width="431" alt="image" src="https://github.com/chandy619/configure-ad/assets/144288806/12bb24b6-e0eb-463e-b7df-996551e74a01">
+<img width="960" alt="image" src="https://github.com/chandy619/configure-ad/assets/144288806/6fe517e2-a27d-4b80-b440-07f1729696ee">
+<img width="960" alt="image" src="https://github.com/chandy619/configure-ad/assets/144288806/d76d30fa-723d-49d7-a59d-6539def1519e">
 </p>
 <p>
 2. Ensure Connectivity Between Client-1 and DC-1: Using Remote Desktop, login to Client-1 and send a perpetual ping to DC-1's private IP address using 'ping -t (IP address)' via Command. You will see the connection being timed out. Next, login to DC-1 using Remote Desktop and enable ICMPv4 on the local Windows Firewall by following this string of actions: Start menu > search 'Firewall' > open 'Windows Defender Firewall with Advance Security' > click on 'Inbound Rules' > filter by Protocol > enable both 'Core Netowrking Diagnostics - ICMP Echo Request (ICMPv4-In)'. Lastly, check back on Client-1's VM to see if the ping succeeds. 
@@ -46,7 +46,7 @@ This lab outlines the implementation of on-premises Active Directory within Azur
 <br />
 
 <p>
-<img width="365" alt="image" src="https://github.com/chandy619/configure-ad/assets/144288806/344606fa-c9a4-40f8-b793-bf6e6ea67657">
+<img width="960" alt="image" src="https://github.com/chandy619/configure-ad/assets/144288806/a2e755f9-82fb-4209-9ea8-0075c6934672">
 <img width="782" alt="image" src="https://github.com/chandy619/configure-ad/assets/144288806/410e31fe-4ca5-4b04-b26c-714201815450">
 </p>
 <p>
