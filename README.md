@@ -10,7 +10,7 @@ This lab outlines the implementation of on-premises Active Directory within Azur
 - Microsoft Azure (Virtual Machines/Compute)
 - Remote Desktop
 - Active Directory Domain Services
-- Command Prompt (cmd)
+- Command Prompt
 - PowerShell ISE
 
 <h2>Operating Systems Used </h2>
@@ -28,10 +28,11 @@ This lab outlines the implementation of on-premises Active Directory within Azur
 <h2>Deployment and Configuration Steps</h2>
 
 <p>
-<img width="323" alt="image" src="https://github.com/chandy619/configure-ad/assets/144288806/0b1aa6d6-658b-4f21-b88d-dfbd236c9b69">
+<img width="960" alt="image" src="https://github.com/chandy619/configure-ad/assets/144288806/e8916f25-003d-4c9b-8af9-a37e3b5e7d17">
+<img width="961" alt="image" src="https://github.com/chandy619/configure-ad/assets/144288806/124bd85a-11e0-44c8-b1c6-d5ffadce64a1">
 </p>
 <p>
-1. Create Your Resources in Azure: 1 Resource Group > 2 VMs > 1 vnet. The first VM will be a Windows Server 2022 as your Domain Controller (named DC-1) and the second VM will be a Windows 10 PC Client (named Client-1). Be sure to set the DC-1's NIC Private IP address to static by following this string of actions: DC-1 > Settings > Networking > Network Interface > IP configurations > Click on result > Switch Assignment from 'Dynamic' to 'Static'> 'Save' changes.
+1. Create Your Resources in Azure: 1 Resource Group > 2 VMs > 1 vnet. The first VM will be a Windows Server 2022 as your Domain Controller (named DC-1) and the second VM will be a Windows 10 PC Client (named Client-1). Be sure to set the DC-1's NIC Private IP address to static by following this string of actions: DC-1 > Settings > Networking > Network Interface hyperlink > IP configurations > Click on result > Switch Assignment from 'Dynamic' to 'Static'> 'Save' changes.
 </p>
 <br />
 
