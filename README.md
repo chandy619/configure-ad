@@ -82,33 +82,34 @@ Now that you've created your OUs, you'll need to create an Adminstrative User. F
 
 <p>
 <img width="960" alt="image" src="https://github.com/chandy619/configure-ad/assets/144288806/6c469433-7f49-47cf-90eb-2e33ca294bed">
-<img width="960" alt="image" src="https://github.com/chandy619/configure-ad/assets/144288806/c8dad9e3-9c8d-43a8-82fa-4203e38db20a">
+<img width="960" alt="image" src="https://github.com/chandy619/configure-ad/assets/144288806/33929693-ac82-47d2-ac5d-5d84813644af">
 </p>
 <p>
-Using Remote Desktop, log back into Client-1. Once you're logged in, open Command from the Start menu and enter 'ipconfig /all' to check if the DNS Servers reflect's the DC-1's private IP address. Now, right-click the Start menu and click on 'System' for settings. Click on 'Rename this PC (advanced)' located on the right-hand side > click the 'Change' button > click on 'Domain' and type 'mydomain.com' > 'OK' > enter Jane Doe's credentials > 'OK'. Your computer will restart.
-</p>
-<br />
-
-<p>
-<img width="471" alt="image" src="https://github.com/chandy619/configure-ad/assets/144288806/f946bebc-ae80-4302-9aa5-9983f0093667">
-</p>
-<p>
-6. Set-up Remote Desktop for Non-Admin Users on Client-1: Log back into Client-1's VM using Jane Doe's credentials, i.e., 'mydomain.com\jane_admin' and password. Open system properties again using the Start menu. Select 'Remote desktop' on the right-hand side. Click on 'Select users that can remotely access this PC' at the bottom. Click 'Add' and type in 'Domain Users'. Click 'Check Names' and once it populates, click 'OK'. Now all domain users will be able to Remote Desktop login to Client-1's computer.
+Using Remote Desktop, log back into Client-1. Once you're logged in, open Command from the Start menu and enter 'ipconfig /all' to check if the DNS Servers reflect's the DC-1's private IP address. Now, right-click the Start menu and click on 'System' for settings. Click on 'Rename this PC (advanced)' located on the right-hand side > click the 'Change' button > click on 'Domain' and type 'mydomain.com' > 'OK' > enter Jane's FQDN credentials, i.e., 'mydomain.com\jane_admin' and password. > 'OK'. Your computer will need to restart.
 </p>
 <br />
 
 <p>
-<img width="656" alt="image" src="https://github.com/chandy619/configure-ad/assets/144288806/486d7e93-ed3d-473e-9f7e-a2912bb1e8f4">
+<img width="960" alt="image" src="https://github.com/chandy619/configure-ad/assets/144288806/d5dc49a3-6daa-4817-b4e0-596063036dcd">
 </p>
 <p>
-7. Create Additional Users and Attempt to Login to Client-1: Go back to DC-1's VM where you should still be logged in as Jane Doe. Follow this string of actions to create thousands of random domain users: Start menu > search 'PowerShell ISE' > right-click to 'Run as an administrator' > click 'Yes' > click on the paper icon to create a 'New Script' > paste the contents of this <a href="https://github.com/AsiaPonder001/BunchofUsers/blob/main/README.md?plain=1)"> script </a> into it > 'Run' script by selecting the green play icon > Observe the accounts being created.
+6. Set-up Remote Desktop for Non-Admin Users on Client-1: Log back into Client-1's VM using Jane Doe's FQDN credentials. Open system properties again using the Start menu. Select 'Remote desktop' on the right-hand side. Click on 'Select users that can remotely access this PC' at the bottom. Click 'Add' and type in 'Domain Users'. Click 'Check Names' and once it populates, click 'OK'. Now all domain users will be able to Remote Desktop login to Client-1's computer.
 </p>
 <br />
 
 <p>
-<img width="401" alt="image" src="https://github.com/chandy619/configure-ad/assets/144288806/24af682c-cac1-47bb-96f3-843e81b43f3c">
+<img width="960" alt="image" src="https://github.com/chandy619/configure-ad/assets/144288806/4f744b09-0fdc-45b3-8aed-45183448ad0c">
 </p>
 <p>
-After creating the domain users, you can choose one of the random domain usernames generated while using 'Password1' as the password to suggessfully login to Client-1's VM.
+7. Create Additional Users and Attempt to Login to Client-1: Go back to DC-1's VM where you should still be logged in as Jane Doe. Follow this string of actions to create hundreds or thousands of random domain users: Start menu > search 'PowerShell ISE' > right-click to 'Run as an administrator' > click 'Yes' > click on the paper icon to create a 'New Script' > paste the contents of this <a href="https://github.com/AsiaPonder001/BunchofUsers/blob/main/README.md?plain=1)"> script </a> into it > 'Run' script by selecting the green play icon > Observe the accounts being created.
+</p>
+<br />
+
+<p>
+<img width="960" alt="image" src="https://github.com/chandy619/configure-ad/assets/144288806/c395eb35-7fe7-4226-acda-ec6432c599cf">
+<img width="960" alt="image" src="https://github.com/chandy619/configure-ad/assets/144288806/72fe0c00-bbf4-4da0-a331-81b0d948ce34">
+</p>
+<p>
+After creating the domain users, return to 'Active Directory Users and Computers' and double-click the '_EMPLOYEES' folder to view the list of random domain usernames you've just generated. Choose one to Remote Desktop login using Client-1's VM. Don't forget to use the FQDN username and password (Password1) to suggessfully login to Client-1's VM. In the next couple of labs, we'll get more practice with Domain Name System and Newtork File Shares and Permissions.
 </p>
 <br />
