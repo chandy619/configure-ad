@@ -37,8 +37,8 @@ This lab outlines the implementation of on-premises Active Directory within Azur
 <br />
 
 <p>
-<img width="960" alt="image" src="https://github.com/chandy619/configure-ad/assets/144288806/6fe517e2-a27d-4b80-b440-07f1729696ee">
-<img width="960" alt="image" src="https://github.com/chandy619/configure-ad/assets/144288806/d76d30fa-723d-49d7-a59d-6539def1519e">
+<img width="960" alt="image" src="https://github.com/chandy619/configure-ad/assets/144288806/960f38b6-6ec4-48e4-a7d9-e89235aa183f">
+<img width="960" alt="image" src="https://github.com/chandy619/configure-ad/assets/144288806/67313a5c-ee88-4bc1-b259-5869ca6efab9">
 </p>
 <p>
 2. Ensure Connectivity Between Client-1 and DC-1: Using Remote Desktop, login to Client-1 and send a perpetual ping to DC-1's private IP address using 'ping -t (IP address)' via Command. You will see the connection being timed out. Next, login to DC-1 using Remote Desktop and enable ICMPv4 on the local Windows Firewall by following this string of actions: Start menu > search 'Firewall' > open 'Windows Defender Firewall with Advance Security' > click on 'Inbound Rules' > filter by Protocol > enable both 'Core Netowrking Diagnostics - ICMP Echo Request (ICMPv4-In)'. Lastly, check back on Client-1's VM to see if the ping succeeds. 
@@ -46,43 +46,46 @@ This lab outlines the implementation of on-premises Active Directory within Azur
 <br />
 
 <p>
-<img width="960" alt="image" src="https://github.com/chandy619/configure-ad/assets/144288806/a2e755f9-82fb-4209-9ea8-0075c6934672">
-<img width="782" alt="image" src="https://github.com/chandy619/configure-ad/assets/144288806/410e31fe-4ca5-4b04-b26c-714201815450">
+<img width="960" alt="image" src="https://github.com/chandy619/configure-ad/assets/144288806/5ed02098-46f7-4790-81b9-287cd2be6565">
+<img width="960" alt="image" src="https://github.com/chandy619/configure-ad/assets/144288806/7ad702d1-5c78-401d-94f7-0c2a45343bda">
 </p>
 <p>
-3. Install Active Directory (AD): Return to DC-1's VM to begin installing AD. Server Manager should be open; follow this string of actions to begin installing: Click on 'Add Roles and Features' > 'Next' through the first 3 sections > under 'Server Roles' check box for 'Active Directory Domain Services'> select 'Add Features' > 'Next' through the remaining sections > click 'Install'. Once AD installs, go to the top right corner of your Server Manager window to click on the Flag and Hazard icon. To finish installing AD, follow this string of actions: click 'Promote this server to a domain controller' > select 'Add a new forest' > type in 'mydomain.com' in root domain name > 'Next' > create a password and type it in (you won't need to remember it) > 'Next' through each section until you get to the option to click 'Install'. Once it's complete, your computer will automatically restart.
-</p>
-<br />
-
-<p>
-<img width="309" alt="image" src="https://github.com/chandy619/configure-ad/assets/144288806/ec5b7748-e53b-4d89-abbc-74036838e3c2">
-<img width="395" alt="image" src="https://github.com/chandy619/configure-ad/assets/144288806/ea682246-c823-4ce5-a213-50ed9468bbef">
-</p>
-<p>
-4. Create Organizational Units (OUs) and an Admin User within AD: Since your DC-1 VM restarted, you'll need to log back in using the FQDN (Fully Qualified Domain Name) as the username, i.e., 'mydomain.com\labuser'. Once you're logged in, click on the Start menu and search for 'Active Directory Users and Computers'. First you'll need to create 2 new OUs. Follow this string of actions to do so: Right-click 'mydomain.com' > click 'New' > select 'Organizational Unit' > type in '_EMPLOYEES' > OK. Repeat the steps to create another OU named '_ADMINS'.
-</p>
-<p>
-<img width="487" alt="image" src="https://github.com/chandy619/configure-ad/assets/144288806/e73e5a96-f3fb-47fc-b9ed-62fec578c450">
-<img width="252" alt="image" src="https://github.com/chandy619/configure-ad/assets/144288806/3c83dafa-a7e8-4005-aa22-72200f0c1f4d">
-</p>
-<p>
-Now that you've created your OUs, you'll need to create an Adminstrative User. Follow this string of actions to create an admin named Jane Doe: Right-click '_ADMINS' folder > 'New' > 'User' > Fill in required fields > 'Next' > create a password > 'Next' > 'Finish'. Now, you'll need to add administrative permissions to Jane Doe's account. Follow these steps: Right-click Jane Doe's name > select 'Properties' > click on the 'Member Of' tab > 'Add' > type in 'Domain Admins' > click 'Check Names' > 'Apply' > 'OK'. When you're finished, log out of DC-1's VM and log back in using Jane Doe's credentials, i.e., 'mydomain.com\jane_admin' and password.
+3. Install Active Directory (AD): Return to DC-1's VM to begin installing AD. Server Manager should be open; follow this string of actions to begin installing: Click on 'Add Roles and Features' > 'Next' through the first 3 sections > under 'Server Roles' check box for 'Active Directory Domain Services'> select 'Add Features' > 'Next' through the remaining sections > click 'Install'. Once AD installs, go to the top right corner of your Server Manager window to click on the Flag/Hazard icon. To finish installing AD, follow this string of actions: click 'Promote this server to a domain controller' > select 'Add a new forest' > type in 'mydomain.com' in root domain name > 'Next' > create a password and type it in (you won't need to remember it for this lab) > 'Next' through each section until you get the option to click 'Install'. Once it's complete, your computer will automatically restart.
 </p>
 <br />
 
 <p>
-<img width="388" alt="image" src="https://github.com/chandy619/configure-ad/assets/144288806/a40eb540-d84f-45e0-9c83-d4226c34d894">
+<img width="960" alt="image" src="https://github.com/chandy619/configure-ad/assets/144288806/aaf5c058-b247-4de0-9523-8c9068ea8ba1">
+<img width="960" alt="image" src="https://github.com/chandy619/configure-ad/assets/144288806/83dee9e8-b3c1-4759-a6a5-ca1f39b07a62">
+
 </p>
 <p>
-5. Join Client-1 to Your Domain (mydomain.com): In Azure, the first thing you'll want to do is copy DC-1's private IP address. Go back to Virtual Machines and select 'Client-1'. To join Client-1 to 'mydomain.com', follow this string of actions: click 'Networking' on the left-hand side > click on 'Network Interface' hyperlink > click on 'DNS Servers' on the left-hand side > select 'Custom' versus 'Inherit from virtual network' > paste DC-1's private IP address into the field box > hit 'Save' > return to Client-1's VM home page and click the 'Restart' icon at the top of your window. Using Remote Desktop, log back into Client-1. Once you're logged in, open Command from the Start menu and enter 'ipconfig /all' to check if the DNS Servers reflect's the DC-1's private IP address.
+4. Create Organizational Units (OUs) and an Admin User within AD: Since your DC-1 VM restarted, you'll need to log back in using the FQDN (Fully Qualified Domain Name) as the username, i.e., 'mydomain.com\labuser'. Once you're logged in, click on the Start menu and search for 'Active Directory Users and Computers'. First you'll need to create 2 new OUs. Follow this string of actions to do so: Click on 'mydomain.com to expand its folder > right-click 'mydomain.com' > click 'New' > select 'Organizational Unit' > type in '_EMPLOYEES' > OK. Repeat the steps to create another OU named '_ADMINS'.
+</p>
+<p>
+<img width="960" alt="image" src="https://github.com/chandy619/configure-ad/assets/144288806/9c404a0b-2ee5-4f08-bd09-e1adcf2a71ce">
+<img width="960" alt="image" src="https://github.com/chandy619/configure-ad/assets/144288806/56608981-ba37-428e-b35d-00dd7997e822">
+</p>
+<p>
+Now that you've created your OUs, you'll need to create an Adminstrative User. Follow this string of actions to create an admin named Jane Doe: Right-click '_ADMINS' folder > 'New' > 'User' > Fill in required fields > 'Next' > create a password > 'Next' > 'Finish'. Now, you'll need to add administrative permissions to Jane Doe's account. Follow these steps: Double-click the '_ADMINS' folder > double-click on Jane Doe's name > click on the 'Member Of' tab > 'Add' > type in 'Domain Admins' > click 'Check Names' > 'Apply' > 'OK'. When you're finished, log out of DC-1's VM and log back in using Jane Doe's credentials, i.e., 'mydomain.com\jane_admin' and password.
 </p>
 <br />
 
 <p>
-<img width="556" alt="image" src="https://github.com/chandy619/configure-ad/assets/144288806/a9d495c6-996d-4193-ab92-30ee596ff88d">
+<img width="960" alt="image" src="https://github.com/chandy619/configure-ad/assets/144288806/853e0bec-54a7-4939-bb79-4e7ba62a35cf">
+<img width="960" alt="image" src="https://github.com/chandy619/configure-ad/assets/144288806/3598bf78-bfdc-4ddd-bcfa-b6125172f72f">
 </p>
 <p>
-Moving along, go to the Start menu and click on 'System' for settings. Click on 'Rename this PC (advanced)' located on the right-hand side > click 'Change' > click on 'Domain' and type 'mydomain.com' > 'OK' > enter Jane Doe's credentials > 'OK'. Your computer will restart.
+5. Join Client-1 to Your Domain (mydomain.com): In Azure, the first thing you'll want to do is copy DC-1's private IP address. Go back to Virtual Machines and select 'Client-1'. To join Client-1 to 'mydomain.com', follow this string of actions: click 'Networking' on the left-hand side > click on 'Network Interface' hyperlink > click on 'DNS Servers' on the left-hand side > select 'Custom' versus 'Inherit from virtual network' > paste DC-1's private IP address into the field box > hit 'Save' > return to Client-1's VM home page and click the 'Restart' icon at the top of your window.
+</p>
+<br />
+
+<p>
+<img width="960" alt="image" src="https://github.com/chandy619/configure-ad/assets/144288806/6c469433-7f49-47cf-90eb-2e33ca294bed">
+<img width="960" alt="image" src="https://github.com/chandy619/configure-ad/assets/144288806/c8dad9e3-9c8d-43a8-82fa-4203e38db20a">
+</p>
+<p>
+Using Remote Desktop, log back into Client-1. Once you're logged in, open Command from the Start menu and enter 'ipconfig /all' to check if the DNS Servers reflect's the DC-1's private IP address. Now, right-click the Start menu and click on 'System' for settings. Click on 'Rename this PC (advanced)' located on the right-hand side > click the 'Change' button > click on 'Domain' and type 'mydomain.com' > 'OK' > enter Jane Doe's credentials > 'OK'. Your computer will restart.
 </p>
 <br />
 
